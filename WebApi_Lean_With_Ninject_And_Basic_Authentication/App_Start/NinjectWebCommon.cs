@@ -15,7 +15,7 @@ namespace WebApi_Lean_With_Ninject_And_Basic_Authentication
 {
     public static class NinjectWebCommon 
     {
-        private static readonly Bootstrapper bootstrapper = new Bootstrapper();
+        private static readonly Bootstrapper Bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
@@ -25,7 +25,7 @@ namespace WebApi_Lean_With_Ninject_And_Basic_Authentication
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
             IKernel container = null;
-            bootstrapper.Initialize(() =>
+            Bootstrapper.Initialize(() =>
             {
                 container = CreateKernel();
                 return container;
@@ -38,7 +38,7 @@ namespace WebApi_Lean_With_Ninject_And_Basic_Authentication
         /// </summary>
         public static void Stop()
         {
-            bootstrapper.ShutDown();
+            Bootstrapper.ShutDown();
         }
         
         /// <summary>
