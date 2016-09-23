@@ -4,8 +4,8 @@ using System.Web.Http;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
 using Ninject.Web.Common;
+using Ninject.Web.WebApi;
 using WebApi_Lean_With_Ninject_And_Basic_Authentication;
-using WebApi_Lean_With_Ninject_And_Basic_Authentication.Infrastructure;
 using WebApi_Lean_With_Ninject_And_Basic_Authentication.NinjectModules;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
